@@ -12,7 +12,7 @@
 // 	A:linear O(n) because its a single for loops that time icrease linearly as the array length increases
 
 // 5. Naive search
-// 	A:
+// 	A:Linear Time  because its a single for loops that time icrease linearly as the array length increases
 
 // 6. Creating pairs:
 // 	A: Polynomial time O(n^k) because theres a nested for loop
