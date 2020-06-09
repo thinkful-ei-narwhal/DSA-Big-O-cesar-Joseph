@@ -32,21 +32,25 @@
 // 	A: The algorithm is checking if the numbers is an odd number. Exponential time O(2^n)
 
 // 11. Tower of Hanoi
-// 	A:
+// 	A:C->B,C->A,B->A,C->B,A->C,A->B,C->B,A->C,B->A,B->C,A->C,B->A,C->B,C->A,B->A,B->C,A->C,A->B,C->B,A->C,B->A,B->C,A->C
+// B:7 moves, 15 moves, 31 moves
+// C: Exponential time O(2^n)
 
+function TOH (n,A,C,B){
+  if (n===1){
+    print(A,C);
+    return;
+  }
+  TOH(n-1,A,B,C);
+  TOH(1, A, C, B);
+  TOH(n - 1, B, C, A);
+}
 
-// function TOH (n,A,C,B){
-//   if (n===1){
-//     print(A,C);
-//   }
-//   TOH(n-1,A,B,C);
-// }
+function print(a,b){
+  console.log(`${a}->${b}`);
+}
 
-// function print(A,B){
-//   console.log(`${A}->${B}`);
-// }
-
-// TOH(1,'A','B','C');
+TOH(5, 'A', 'C', 'B');
 
 // 12.1 Counting Sheep
 
