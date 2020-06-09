@@ -53,7 +53,7 @@ function print(a,b){
 TOH(5, 'A', 'C', 'B');
 
 // 12.1 Counting Sheep
-// 13.1 The BigO for the recursive algorithm
+// 13.1 The BigO for the recursive algorithm is Linear O(n)
 // 14.1 The BigO for this iterative algorithm is Linear O(n)
 
 function sheepJump(numSheep) {
@@ -66,6 +66,7 @@ function sheepJump(numSheep) {
 sheepJump(3);
 
 // 12.2 Power Calculator
+// 13.2 The BigO for the recursive algorithm is Linear O(n)
 // 14.2 The BigO for this iterative algorithm is Linear O(n)
 
 function powerCalculator(num, exponent){
@@ -78,6 +79,7 @@ function powerCalculator(num, exponent){
 console.log(powerCalculator(3,4));
 
 // 12.3 Reverse String
+// 13.3 The BigO for the recursive algorithm is Linear O(n)
 // 14.3 The BigO for this iterative algorithm is LinearO(n)
 
 function reverseString(str) {
@@ -89,11 +91,8 @@ function reverseString(str) {
 }
 console.log(reverseString('the world'));
 
-console.log('---------------')
-console.log(reverseString('selahw'))
-console.log('---------------')
-
 // 12.4 nth Triangular Number
+// 13.4 The BigO for the recursive algorithm is Linear O(n)
 // 14.4 The BigO for this iterative algorithm is Linear O(n)
 
 const tringularNumber = function (num) {
@@ -107,6 +106,7 @@ const tringularNumber = function (num) {
 console.log(tringularNumber(3));
 
 // 12.5 String Splitter
+// 13.5 The BigO for the recursive algorithm is Linear O(n)
 // 14.5 The BigO for this iterative algorithm is Linear O(n)
 
 function stringSpliter(str, sep) {
@@ -129,6 +129,7 @@ function stringSpliter(str, sep) {
 console.log(stringSpliter('11/24/2020', '/'));
 
 // 12.6 Fibonacci
+// 13.6 The BigO for the recursive algorithm is Polynomial O(n)
 // 14.6 The BigO for this iterative algorithm is Linear O(n)
 
 function compute(num) {
@@ -150,7 +151,8 @@ console.log(compute(5));
 
 
 // 12.7 Factorial
-// 14.7 The BigO for this iterative algorithm is Linear O(n)
+// 13.7 The BigO for the recursive algorithm is Linear O(n)
+// 14.7 The BigO for this iterative algorithm is Exponential O(2^n)
 
 const factorial = function (num) {
   let value=1;
