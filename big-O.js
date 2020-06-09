@@ -1,3 +1,4 @@
+'use strict';
 // 1. What is the Big O for this?
 // 	1.Constant time O(1)
 // 	2.linear O(n)
@@ -31,3 +32,17 @@
 
 // 11. Tower of Hanoi
 // 	A:
+
+
+// function TOH (n,A,C,B){
+//   if (n===1){
+//     print(A,C);
+//   }
+//   TOH(n-1,A,B,C);
+// }
+
+// function print(A,B){
+//   console.log(`${A}->${B}`);
+// }
+
+// TOH(1,'A','B','C');
