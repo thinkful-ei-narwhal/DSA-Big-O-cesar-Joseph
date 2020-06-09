@@ -68,3 +68,15 @@ function powerCalculator(num, exponent){
   return value;
 }
 console.log(powerCalculator(3,4));
+
+
+//4. nth Triangular Number
+const tringularNumber = function (num) {
+  let value=0;
+  for (let i=0; i<num; i++){
+    value +=num-1;
+  }
+  return value;
+};
+  
+console.log(tringularNumber(3));
