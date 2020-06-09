@@ -32,24 +32,29 @@
 // 	A: The algorithm is checking if the numbers is an odd number. Exponential time O(2^n)
 
 // 11. Tower of Hanoi
-// 	A:
+// 	A:C->B,C->A,B->A,C->B,A->C,A->B,C->B,A->C,B->A,B->C,A->C,B->A,C->B,C->A,B->A,B->C,A->C,A->B,C->B,A->C,B->A,B->C,A->C
+// B:7 moves, 15 moves, 31 moves
+// C: Exponential time O(2^n)
 
+function TOH (n,A,C,B){
+  if (n===1){
+    print(A,C);
+    return;
+  }
+  TOH(n-1,A,B,C);
+  TOH(1, A, C, B);
+  TOH(n - 1, B, C, A);
+}
 
-// function TOH (n,A,C,B){
-//   if (n===1){
-//     print(A,C);
-//   }
-//   TOH(n-1,A,B,C);
-// }
+function print(a,b){
+  console.log(`${a}->${b}`);
+}
 
-// function print(A,B){
-//   console.log(`${A}->${B}`);
-// }
-
-// TOH(1,'A','B','C');
+TOH(5, 'A', 'C', 'B');
 
 // 12.1 Counting Sheep
-// 14.1 The BigO for this algorithm is Linear O(n)
+// 13.1 The BigO for the recursive algorithm
+// 14.1 The BigO for this iterative algorithm is Linear O(n)
 
 function sheepJump(numSheep) {
   for(let i = numSheep; i >= 0; i--) {
@@ -61,7 +66,7 @@ function sheepJump(numSheep) {
 sheepJump(3);
 
 // 12.2 Power Calculator
-// 14.2 The BigO for this algorithm is Linear O(n)
+// 14.2 The BigO for this iterative algorithm is Linear O(n)
 
 function powerCalculator(num, exponent){
   let value=1;
@@ -73,26 +78,23 @@ function powerCalculator(num, exponent){
 console.log(powerCalculator(3,4));
 
 // 12.3 Reverse String
-// 14.3 The BigO for this algorithm is LinearO(n)
+// 14.3 The BigO for this iterative algorithm is LinearO(n)
 
 function reverseString(str) {
-  let newString = ''
-  let maxIndex = str.length - 1
-
-  while (maxIndex >= 0) {
-    newString += str[maxIndex]
-    maxIndex--
+  let newString='';
+  for (let i=0; i<=str.length; i++){
+    newString +=str.charAt(str.length-i);
   }
-
-  return newString
+  return newString;
 }
+console.log(reverseString('the world'));
 
 console.log('---------------')
 console.log(reverseString('selahw'))
 console.log('---------------')
 
 // 12.4 nth Triangular Number
-// 14.4 The BigO for this algorithm is Linear O(n)
+// 14.4 The BigO for this iterative algorithm is Linear O(n)
 
 const tringularNumber = function (num) {
   let value=0;
@@ -105,7 +107,7 @@ const tringularNumber = function (num) {
 console.log(tringularNumber(3));
 
 // 12.5 String Splitter
-// 14.5 The BigO for this algorithm is Linear O(n)
+// 14.5 The BigO for this iterative algorithm is Linear O(n)
 
 function stringSpliter(str, sep) {
   const arr = [];
@@ -127,7 +129,7 @@ function stringSpliter(str, sep) {
 console.log(stringSpliter('11/24/2020', '/'));
 
 // 12.6 Fibonacci
-// 14.6 The BigO for this algorithm is Linear O(n)
+// 14.6 The BigO for this iterative algorithm is Linear O(n)
 
 function compute(num) {
   let result = [];
@@ -148,7 +150,7 @@ console.log(compute(5));
 
 
 // 12.7 Factorial
-// 14.7 The BigO for this algorithm is Linear O(n)
+// 14.7 The BigO for this iterative algorithm is Linear O(n)
 
 const factorial = function (num) {
   let value=1;
