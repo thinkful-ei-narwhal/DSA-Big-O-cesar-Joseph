@@ -1,4 +1,5 @@
 'use strict';
+
 // 1. What is the Big O for this?
 // 	1.Constant time O(1)
 // 	2.linear O(n)
@@ -47,7 +48,7 @@
 
 // TOH(1,'A','B','C');
 
-// Counting Sheep
+// 12.1 Counting Sheep
 
 function sheepJump(numSheep) {
   for(let i = numSheep; i >= 0; i--) {
@@ -69,6 +70,7 @@ function powerCalculator(num, exponent){
 }
 console.log(powerCalculator(3,4));
 
+<<<<<<< HEAD
 // Reverse String
 
 function reverseString(str) {
@@ -95,3 +97,47 @@ function stringSpliter(str, sep) {
 }
 
 console.log(stringSpliter('11/24/2020', '/'))
+=======
+
+//12.4. nth Triangular Number
+const tringularNumber = function (num) {
+  let value=0;
+  for (let i=0; i<num; i++){
+    value +=num-1;
+  }
+  return value;
+};
+  
+console.log(tringularNumber(3));
+
+//12.6. Fibonacci
+function compute(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+
+    if (i === 1) {
+      result.push(0);
+    }
+    else if (i === 2) {
+      result.push(1);
+    }
+    else {
+      result.push(result[i - 2] + result[i - 3]);
+    }
+  }
+  return result[result.length-1];
+}
+console.log(compute(5));
+
+
+//12.7. Factorial
+const factorial = function (num) {
+  let value=1;
+  for (let i = 1; i <= num; i++) {
+    value *= i;
+  }
+  return value;
+};
+  
+console.log(factorial(6));
+>>>>>>> 400283f5decff8e9da0dfe1519e4b300e627d6f9
