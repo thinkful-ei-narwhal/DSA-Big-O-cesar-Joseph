@@ -49,6 +49,7 @@
 // TOH(1,'A','B','C');
 
 // 12.1 Counting Sheep
+// 14.1 The BigO for this algorithm is Linear O(n)
 
 function sheepJump(numSheep) {
   for(let i = numSheep; i >= 0; i--) {
@@ -60,6 +61,7 @@ function sheepJump(numSheep) {
 sheepJump(3);
 
 // 12.2 Power Calculator
+// 14.2 The BigO for this algorithm is Linear O(n)
 
 function powerCalculator(num, exponent){
   let value=1;
@@ -70,35 +72,28 @@ function powerCalculator(num, exponent){
 }
 console.log(powerCalculator(3,4));
 
-// Reverse String
+// 12.3 Reverse String
+// 14.3 The BigO for this algorithm is LinearO(n)
 
 function reverseString(str) {
-  
-}
+  let newString = ''
+  let maxIndex = str.length - 1
 
-// String Splitter
-
-function stringSpliter(str, sep) {
-  const dateArr = []
-  let date = ''
-  for(let i = 0; i < str.length; i++) {
-    if (str[i] !== sep) {
-      date += str[i]
-    }
-    if (str[i] === sep) {
-      dateArr.push(date)
-      date = ''
-    }
+  while (maxIndex >= 0) {
+    newString += str[maxIndex]
+    maxIndex--
   }
-  dateArr.push(date)
-  return dateArr
+
+  return newString
 }
 
-console.log('-------------------')
-console.log(stringSpliter('11/24/2020', '/'))
-console.log('-------------------')
+console.log('---------------')
+console.log(reverseString('selahw'))
+console.log('---------------')
 
-//12.4. nth Triangular Number
+// 12.4 nth Triangular Number
+// 14.4 The BigO for this algorithm is Linear O(n)
+
 const tringularNumber = function (num) {
   let value=0;
   for (let i=0; i<num; i++){
@@ -109,11 +104,34 @@ const tringularNumber = function (num) {
   
 console.log(tringularNumber(3));
 
-//12.6. Fibonacci
+// 12.5 String Splitter
+// 14.5 The BigO for this algorithm is Linear O(n)
+
+function stringSpliter(str, sep) {
+  const arr = [];
+  let leftOver;
+  
+  for(let i = 0; i < str.length; i++) {
+    let index=str.indexOf(sep);
+    let cut=str.substring(0,index);
+    leftOver=str.substring(index+1,str.length);
+    str=leftOver;
+    if(index>0){
+      arr.push(cut);
+    }
+  }
+  arr.push(leftOver);
+  return arr;
+}
+  
+console.log(stringSpliter('11/24/2020', '/'));
+
+// 12.6 Fibonacci
+// 14.6 The BigO for this algorithm is Linear O(n)
+
 function compute(num) {
   let result = [];
   for (let i = 1; i <= num; i++) {
-
     if (i === 1) {
       result.push(0);
     }
@@ -129,7 +147,9 @@ function compute(num) {
 console.log(compute(5));
 
 
-//12.7. Factorial
+// 12.7 Factorial
+// 14.7 The BigO for this algorithm is Linear O(n)
+
 const factorial = function (num) {
   let value=1;
   for (let i = 1; i <= num; i++) {
