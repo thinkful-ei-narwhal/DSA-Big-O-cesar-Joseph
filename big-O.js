@@ -68,3 +68,30 @@ function powerCalculator(num, exponent){
   return value;
 }
 console.log(powerCalculator(3,4));
+
+// Reverse String
+
+function reverseString(str) {
+
+}
+
+// String Splitter
+
+function stringSpliter(str, sep) {
+  const dateArr = []
+  let string = str
+  for(let i = 0; i < string.length; i++) {
+    let index = string.indexOf(sep)
+    console.log(string[i])
+    if (string[i] === sep) {
+      const value = str.slice(string[i-2], index)
+      // console.log('array' ,value)
+      dateArr.push(value)
+      console.log('dateArr', dateArr)
+      string = string.slice(index + 1)
+    }
+  }
+  return dateArr
+}
+
+console.log(stringSpliter('11/24/2020', '/'))
