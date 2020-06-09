@@ -73,8 +73,13 @@ console.log(powerCalculator(3,4));
 // Reverse String
 
 function reverseString(str) {
-
+  let newString='';
+  for (let i=0; i<=str.length; i++){
+    newString +=str.charAt(str.length-i);
+  }
+  return newString;
 }
+console.log(reverseString('the world'));
 
 //12.4. nth Triangular Number
 const tringularNumber = function (num) {
