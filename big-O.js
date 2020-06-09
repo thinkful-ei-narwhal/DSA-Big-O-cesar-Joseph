@@ -1,4 +1,5 @@
 'use strict';
+
 // 1. What is the Big O for this?
 // 	1.Constant time O(1)
 // 	2.linear O(n)
@@ -99,3 +100,15 @@ function compute(num) {
   return result[result.length-1];
 }
 console.log(compute(5));
+
+
+//12.7. Factorial
+const factorial = function (num) {
+  let value=1;
+  for (let i = 1; i <= num; i++) {
+    value *= i;
+  }
+  return value;
+};
+  
+console.log(factorial(6));
