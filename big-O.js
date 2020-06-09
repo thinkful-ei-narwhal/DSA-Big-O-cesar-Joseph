@@ -70,34 +70,11 @@ function powerCalculator(num, exponent){
 }
 console.log(powerCalculator(3,4));
 
-<<<<<<< HEAD
 // Reverse String
 
 function reverseString(str) {
 
 }
-
-// String Splitter
-
-function stringSpliter(str, sep) {
-  const dateArr = []
-  let string = str
-  for(let i = 0; i < string.length; i++) {
-    let index = string.indexOf(sep)
-    console.log(string[i])
-    if (string[i] === sep) {
-      const value = str.slice(string[i-2], index)
-      // console.log('array' ,value)
-      dateArr.push(value)
-      console.log('dateArr', dateArr)
-      string = string.slice(index + 1)
-    }
-  }
-  return dateArr
-}
-
-console.log(stringSpliter('11/24/2020', '/'))
-=======
 
 //12.4. nth Triangular Number
 const tringularNumber = function (num) {
@@ -109,6 +86,27 @@ const tringularNumber = function (num) {
 };
   
 console.log(tringularNumber(3));
+
+//12.5 String Splitter
+
+function stringSpliter(str, sep) {
+  const arr = [];
+  let leftOver;
+  
+  for(let i = 0; i < str.length; i++) {
+    let index=str.indexOf(sep);
+    let cut=str.substring(0,index);
+    leftOver=str.substring(index+1,str.length);
+    str=leftOver;
+    if(index>0){
+      arr.push(cut);
+    }
+  }
+  arr.push(leftOver);
+  return arr;
+}
+  
+console.log(stringSpliter('11/24/2020', '/'));
 
 //12.6. Fibonacci
 function compute(num) {
@@ -140,4 +138,3 @@ const factorial = function (num) {
 };
   
 console.log(factorial(6));
->>>>>>> 400283f5decff8e9da0dfe1519e4b300e627d6f9
