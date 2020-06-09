@@ -47,7 +47,7 @@
 
 // TOH(1,'A','B','C');
 
-// Counting Sheep
+// 12.1 Counting Sheep
 
 function sheepJump(numSheep) {
   for(let i = numSheep; i >= 0; i--) {
@@ -70,7 +70,7 @@ function powerCalculator(num, exponent){
 console.log(powerCalculator(3,4));
 
 
-//4. nth Triangular Number
+//12.4. nth Triangular Number
 const tringularNumber = function (num) {
   let value=0;
   for (let i=0; i<num; i++){
@@ -80,3 +80,22 @@ const tringularNumber = function (num) {
 };
   
 console.log(tringularNumber(3));
+
+//12.6. Fibonacci
+function compute(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+
+    if (i === 1) {
+      result.push(0);
+    }
+    else if (i === 2) {
+      result.push(1);
+    }
+    else {
+      result.push(result[i - 2] + result[i - 3]);
+    }
+  }
+  return result[result.length-1];
+}
+console.log(compute(5));
