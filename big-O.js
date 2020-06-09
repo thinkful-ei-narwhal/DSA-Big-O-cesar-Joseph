@@ -70,34 +70,33 @@ function powerCalculator(num, exponent){
 }
 console.log(powerCalculator(3,4));
 
-<<<<<<< HEAD
 // Reverse String
 
 function reverseString(str) {
-
+  
 }
 
 // String Splitter
 
 function stringSpliter(str, sep) {
   const dateArr = []
-  let string = str
-  for(let i = 0; i < string.length; i++) {
-    let index = string.indexOf(sep)
-    console.log(string[i])
-    if (string[i] === sep) {
-      const value = str.slice(string[i-2], index)
-      // console.log('array' ,value)
-      dateArr.push(value)
-      console.log('dateArr', dateArr)
-      string = string.slice(index + 1)
+  let date = ''
+  for(let i = 0; i < str.length; i++) {
+    if (str[i] !== sep) {
+      date += str[i]
+    }
+    if (str[i] === sep) {
+      dateArr.push(date)
+      date = ''
     }
   }
+  dateArr.push(date)
   return dateArr
 }
 
+console.log('-------------------')
 console.log(stringSpliter('11/24/2020', '/'))
-=======
+console.log('-------------------')
 
 //12.4. nth Triangular Number
 const tringularNumber = function (num) {
@@ -140,4 +139,3 @@ const factorial = function (num) {
 };
   
 console.log(factorial(6));
->>>>>>> 400283f5decff8e9da0dfe1519e4b300e627d6f9
